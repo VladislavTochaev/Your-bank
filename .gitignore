@@ -1,0 +1,19 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules
+dist
+
+#.gitignore by Alexander Lamkov
+node_modules/
+.env*
+.vscode/
+.idea/
+*.code-workspace
+dist/
+build/
+*.log
+.cache/
+*.tmp
+*.DS_Store
