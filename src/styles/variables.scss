@@ -1,0 +1,55 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  --color-green-60: #CAFF33;
+  --color-green-65: #D1FF4C;
+  --color-green-70: #D8FF66;
+  --color-green-80: #E5FF99;
+  --color-green-90: #F2FFCC;
+  --color-green-95: #F8FFE5;
+  --color-green-97: #FBFFF0;
+  --color-green-99: #FEFFFA;
+
+  --color-gray-10: #191919;
+  --color-gray-11: #1C1C1C;
+  --color-gray-15: #262626;
+  --color-gray-20: #333333;
+  --color-gray-30: #4C4C4D;
+  --color-gray-35: #59595A;
+  --color-gray-40: #656567;
+  --color-gray-60: #98989A;
+  --color-gray-70: #B3B3B3;
+  --color-gray-75: #BFBFBF;
+
+  --color-white-90: #E4E4E7;
+  --color-white-95: #F1F1F3;
+  --color-white-97: #F7F7F8;
+  --color-white-99: #FCFCFD;
+
+  --border-width-l: 4px;
+  --border-width-m: 3px;
+  --border-width-s: 1px;
+
+  --border: var(--border-width-s) solid var(--color-gray-15);
+
+  --border-radius-l: 12px;
+  --border-radius-m: 10px;
+  --border-radius-s: 8px;
+  --border-radius-xs: 6px;
+  --border-radius-xss: 5px;
+  --border-radius-xxxs: 4px;
+
+  --font-family-base: 'Lexend', sans-serif;
+
+  --container--width: #{fluid-to-laptop(
+    $container-desktop-width,
+    $container-laptop-width
+  )};
+  --container-padding-x: 16px;
+
+  --sectionPaddingY: #{fluid(75, 40)};
+
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}

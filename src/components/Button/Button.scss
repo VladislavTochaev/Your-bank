@@ -1,0 +1,37 @@
+.button {
+  @include flex-center(true);
+
+  column-gap: 4px;
+  padding: fluid-to-laptop(18, 14) fluid-to-laptop(30, 20);
+  color: var(--color-gray-11);
+  background-color: var(--color-green-60);
+  border: none;
+  border-radius: 82px;
+  user-select: none;
+  cursor: pointer;
+
+  @include hover {
+    color: var(--color-gray-15);
+    background-color: var(--color-green-70);
+  }
+
+  &:active {
+    scale: 1.05;
+  }
+
+  &:disabled {
+    color: var(--color-gray-60);
+    background-color: var(--color-gray-10);
+    pointer-events: none;
+  }
+
+  &--transparent {
+    color: var(--color-white);
+    background-color: transparent;
+
+    @include hover {
+      color: var(--color-green-60);
+      background-color: transparent;
+    }
+  }
+}
