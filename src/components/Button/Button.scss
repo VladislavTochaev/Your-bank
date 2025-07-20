@@ -25,6 +25,12 @@
     pointer-events: none;
   }
 
+  &:has(.button__icon:only-child) {
+    @include square(#{fluid-to-laptop(52, 44)});
+
+    padding: 0;
+  }
+
   &--transparent {
     color: var(--color-white);
     background-color: transparent;

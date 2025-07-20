@@ -4,15 +4,8 @@
   justify-content: center;
   align-items: center;
   row-gap: fluid(50, 30);
+  padding: fluid(100, 50) var(--container-padding-x) fluid-to-laptop(50, 30);
   background-color: var(--color-gray-11);
-
-  /*&__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: fluid(50, 30);
-  }*/
 
   &__body {
     display: flex;
@@ -23,6 +16,7 @@
   }
 
   &__logo {
+    width: fluid-to-laptop(155, 132);
     align-self: center;
   }
 
@@ -31,9 +25,16 @@
       display: flex;
       column-gap: fluid-to-laptop(26, 14);
     }
+
+    &-link {
+      color: var(--color-white-90);
+    }
   }
 
   &__connection {
+    padding-block: fluid-to-laptop(50, 30);
+    border-block: var(--border);
+
     &-list {
       display: flex;
       justify-content: center;
@@ -46,7 +47,57 @@
     }
 
     &-link {
+      color: var(--color-white-90);
       column-gap: 6px;
+    }
+  }
+
+  &__extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+    padding-block: fluid-to-laptop(16, 12);
+    background-color: var(--color-gray-10);
+    border: var(--border);
+    border-radius: 100px;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 20px;
+      border-radius: var(--border-radius-l);
+    }
+
+    &-links {
+      display: flex;
+      align-items: center;
+      column-gap: fluid-to-laptop(12, 8);
+    }
+
+    &-link {
+      &:not(:last-child) {
+        position: relative;
+        padding-right: fluid-to-laptop(12, 8);
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          width: 1px;
+          height: 100%;
+          background-color: var(--color-gray-70);
+        }
+      }
+    }
+  }
+
+  &__soc1als {
+    @include mobile {
+      margin-top: -5%;
+    }
+
+    @include mobile-s {
+      margin-top: -10%;
     }
   }
 }

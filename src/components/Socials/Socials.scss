@@ -1,0 +1,14 @@
+.soc1als {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: fluid-to-laptop(14, 8);
+  }
+
+  &__link {
+    @include hover {
+      color: var(--color-white-90);
+      background-color: var(--color-gray-15);
+    }
+  }
+}

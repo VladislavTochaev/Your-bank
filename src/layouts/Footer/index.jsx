@@ -2,6 +2,7 @@ import './Footer.scss'
 import Logo from '@/components/Logo'
 import classNames from 'classnames'
 import Icon from '@/components/Icon'
+import Socials from '@/components/Socials'
 
 export default (props) => {
   const { url } = props
@@ -43,7 +44,22 @@ export default (props) => {
     },
   ]
 
-  const extraLinks = []
+  const socialsLinks = [
+    {
+      label: 'Facebook',
+      iconName: 'facebook',
+    },
+    {
+      label: 'Twitter',
+      iconName: 'twitter',
+    },
+    {
+      label: 'LinkedIn',
+      iconName: 'linked-in',
+    },
+  ]
+
+  const extraLinks = ['Privacy Policy', 'Terms of Service']
 
   return (
     <footer className="footer">
@@ -85,7 +101,23 @@ export default (props) => {
           ))}
         </ul>
       </div>
-      <div className="footer__extra container"></div>
+      <div className="footer__extra container">
+        <Socials className="footer__soc1als" links={socialsLinks} />
+        <div className="footer__copyright">
+          <p>YourBank All Rights Reserved</p>
+        </div>
+        <div className="footer__extra-links">
+          {extraLinks.map((link, index) => (
+            <a
+              className="footer__extra-link"
+              href="/"
+              key={index}
+            >
+              {link}
+            </a>
+          ))}
+        </div>
+      </div>
     </footer>
   )
 }
