@@ -1,0 +1,49 @@
+.hero {
+  &__inner {
+    display: grid;
+    grid-template-columns: 56% auto;
+    column-gap: fluid-to-laptop(120, 100);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    column-gap: fluid-to-laptop(6, 4);
+    margin-bottom: fluid(20, 12);
+    padding-block: fluid-to-laptop(10, 8);
+    padding-left: fluid-to-laptop(12, 8);
+    padding-right: fluid-to-laptop(20, 16);
+    font-weight: 300;
+    color: var(--color-white);
+    background-color: var(--color-gray-15);
+    border-radius: 61px;
+
+    &-icon {
+      color: var(--color-green-60);
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: fluid(14, 8);
+    margin-bottom: fluid(50, 30);
+  }
+
+  &__title {
+    &--green {
+      color: var(--color-green-60);
+    }
+  }
+
+  &__description {
+    color: var(--color-white-90);
+    font-weight: 300;
+  }
+}
