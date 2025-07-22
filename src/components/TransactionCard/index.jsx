@@ -23,7 +23,7 @@ export default (props) => {
           <span className="transaction-card__person">{label}</span>
         </div>
       </div>
-      <span className="transition-card__price">-$68.00</span>
+      <span className="transaction-card__price">-$68.00</span>
     </div>
   )
 }

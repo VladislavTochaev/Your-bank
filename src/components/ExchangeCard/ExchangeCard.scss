@@ -1,0 +1,37 @@
+.exchange-card {
+  display: grid;
+  background-color: var(--color-gray-11);
+  border-right: var(--border);
+
+  &__info {
+    display: grid;
+    row-gap: fluid(9, 5);
+    padding: fluid(18, 10);
+    border-bottom: var(--border);
+  }
+
+  &__icon {
+    @include square(#{fluid(35, 20)});
+  }
+
+  &__abbreviation {
+    color: var(--color-white);
+  }
+
+  &__country {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(9, 5);
+  }
+
+  &__currency {
+    color: var(--color-white-90);
+    font-weight: 300;
+  }
+
+  &__value {
+    padding: fluid(26, 16) fluid(18, 10);
+    font-weight: 500;
+    color: var(--color-white);
+  }
+}

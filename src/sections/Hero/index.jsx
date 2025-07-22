@@ -2,6 +2,7 @@ import './Hero.scss'
 import Button from '@/components/Button'
 import TransactionCard from '@/components/TransactionCard'
 import Icon from '@/components/Icon'
+import ExchangeCard from '@/components/ExchangeCard'
 
 export default () => {
   const titleId = 'hero-title'
@@ -10,6 +11,21 @@ export default () => {
     'Joel Kenley',
     'Mark Smith',
     'Lenen Roy',
+  ]
+
+  const exchangeItems = [
+    {
+      countryIcon: 'india',
+      abbreviationCurrency: 'INR',
+      currency: 'Indian Rupees',
+      value: '5,0000',
+    },
+    {
+      countryIcon: 'usa',
+      abbreviationCurrency: 'USD',
+      currency: 'United States Dollar',
+      value: '12.00',
+    },
   ]
 
   return (
@@ -63,7 +79,25 @@ export default () => {
                 ))}
               </ul>
             </div>
-            <div className="hero__rate-body"></div>
+            <div className="hero__rate-extra">
+              <h3 className="hero__rate-subtitle">Money Exchange</h3>
+              <ul className="hero__exchange-list">
+                {exchangeItems.map((exchangeItem, index) => (
+                  <li className="hero__exchange-item">
+                    <ExchangeCard
+                      className="hero__exchange-card"
+                      {...exchangeItem}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <button
+              className="hero__rate-button"
+              type="button"
+            >
+              Exchange
+            </button>
           </div>
         </div>
       </div>
