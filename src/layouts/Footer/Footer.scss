@@ -53,6 +53,7 @@
   }
 
   &__extra {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,6 +66,8 @@
     @include mobile {
       flex-direction: column;
       row-gap: 20px;
+      padding-top: 50px;
+      padding-bottom: 30px;
       border-radius: var(--border-radius-l);
     }
 
@@ -93,11 +96,10 @@
 
   &__soc1als {
     @include mobile {
-      margin-top: -5%;
-    }
+      @include abs-x;
 
-    @include mobile-s {
-      margin-top: -10%;
+      position: absolute;
+      top: -18%;
     }
   }
 }
